@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 812431b986e275c4fbd5068717dc3ab3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameStarted: {fileID: 11400000, guid: 05559b41f0e4afd41aabb543af8e0cff, type: 2}
+  - gamePaused: {fileID: 11400000, guid: d22805b7bddc82346a29f6ae891e2f09, type: 2}
+  - gameEnded: {fileID: 11400000, guid: 42a3d0c863ec3244984a0e73ddc7d71c, type: 2}
+  - uiState: {fileID: 11400000, guid: b769a0e336ec0de42ae67612838df2c8, type: 2}
+  - setUIVisibility: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
