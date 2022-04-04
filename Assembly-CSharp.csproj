@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\SpawnerController.cs" />
      <Compile Include="Assets\Scripts\UI\InputPlaceholder.cs" />
      <Compile Include="Assets\Destroyer.cs" />
+     <Compile Include="Assets\CorrectVal.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\countries.json" />

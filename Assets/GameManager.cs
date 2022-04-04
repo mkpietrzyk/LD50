@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 using UnityAtoms.BaseAtoms;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -43,32 +44,30 @@ public class GameManager : MonoBehaviour
     {
         gameStarted.Value = true;
         uiState.Value = "PlayerUI";
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0;
         uiState.Value = "PauseMenu";
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
         uiState.Value = "PlayerUI";
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     public void ReturnToMenu()
     {
         gameStarted.Value = false;
         gamePaused.Value = false;
-        gameEnded.Value = false;
+        gameEnded.Value = true;
+        misses.Value = 0;
+        score.Value = 0;
+        Time.timeScale = 1;
         uiState.Value = "MainMenu";
+        SceneManager.LoadScene("Main", LoadSceneMode.Single);
     }
 
     public void EndGame()
@@ -89,7 +88,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckMisses(int misses)
     {
-        if (misses >= 3)
+        if (misses >= 4)
         {
             EndGame();
         }

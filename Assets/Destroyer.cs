@@ -9,7 +9,7 @@ public class Destroyer : MonoBehaviour
     {
         if (other.CompareTag("Box"))
         {
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 }

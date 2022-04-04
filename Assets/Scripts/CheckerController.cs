@@ -16,6 +16,8 @@ public class CheckerController : MonoBehaviour
     public StringVariable playerInput;
     public IntVariable score;
     public IntVariable misses;
+    public TextMeshProUGUI correct;
+    public TextMeshProUGUI incorrect;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,6 +28,23 @@ public class CheckerController : MonoBehaviour
             var label = other.GetComponentInChildren<TextMeshPro>().text;
             // selectedBox.Value = other.GetComponent<GameObject>();
             boxLabel.Value = label.ToLower();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Box"))
+        {
+            if (boxLabel.Value == playerInput.Value)
+            {
+                correct.color = new Color(correct.color.r, correct.color.g, correct.color.b, 1f);
+                incorrect.color = new Color(incorrect.color.r, incorrect.color.g, incorrect.color.b, 0.5f);
+            }
+            else
+            {
+                incorrect.color = new Color(incorrect.color.r, incorrect.color.g, incorrect.color.b, 1f);
+                correct.color = new Color(correct.color.r, correct.color.g, correct.color.b, 0.5f);
+            }
         }
     }
 
@@ -47,6 +66,8 @@ public class CheckerController : MonoBehaviour
             playerInput.Value = "";
             playerInputField.text = "";
             playerInputField.DeactivateInputField();
+            correct.color = new Color(correct.color.r, correct.color.g, correct.color.b, 0.5f);
+            incorrect.color = new Color(incorrect.color.r, incorrect.color.g, incorrect.color.b, 0.5f);
         }
     }
 }
