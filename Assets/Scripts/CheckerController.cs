@@ -45,6 +45,7 @@ public class CheckerController : MonoBehaviour
             }
             boxLabel.Value = "awaiting parcel...";
             playerInput.Value = "";
+            playerInputField.text = "";
             playerInputField.DeactivateInputField();
         }
     }

@@ -44,21 +44,14 @@ public class ActivatorController : MonoBehaviour
     {
         if (other.CompareTag("Box"))
         {
-            var localScaleX = other.transform.localScale.x;
-            var localScaleY = other.transform.localScale.y;
-            if (localScaleX == 2 && localScaleY == 2)
+            var localScaleZ = other.transform.localScale.z;
+            if (localScaleZ == 4)
             {
                 var randomIndex = Random.Range(0, difficultCountries.Length);
                 var selectedCountry = difficultCountries[randomIndex].name;
                 other.GetComponentInChildren<TextMeshPro>().text = selectedCountry.ToLower();
             }
-            else if (localScaleX == 1 && localScaleY == 2)
-            {
-                var randomIndex = Random.Range(0, mediumCountries.Length);
-                var selectedCountry = mediumCountries[randomIndex].name;
-                other.GetComponentInChildren<TextMeshPro>().text = selectedCountry.ToLower();
-            }
-            else if (localScaleX == 2 && localScaleY == 1)
+            else if (localScaleZ == 1 || localScaleZ == 2)
             {
                 var randomIndex = Random.Range(0, mediumCountries.Length);
                 var selectedCountry = mediumCountries[randomIndex].name;
@@ -68,7 +61,7 @@ public class ActivatorController : MonoBehaviour
             {
                 var randomIndex = Random.Range(0, easyCountries.Length);
                 var selectedCountry = easyCountries[randomIndex].name;
-                other.GetComponentInChildren<TextMeshPro>().text = selectedCountry;
+                other.GetComponentInChildren<TextMeshPro>().text = selectedCountry.ToLower();
             }
         }
     }

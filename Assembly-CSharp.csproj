@@ -41,15 +41,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ScriptableObjects\Box.cs" />
-     <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\Scripts\ActivatorController.cs" />
-     <Compile Include="Assets\Scripts\playerController.cs" />
-     <Compile Include="Assets\Scripts\SpawnerController.cs" />
      <Compile Include="Assets\Scripts\CheckerController.cs" />
-     <Compile Include="Assets\Scripts\UI\InputPlaceholder.cs" />
-     <Compile Include="Assets\BoxController.cs" />
+     <Compile Include="Assets\ScriptableObjects\Box.cs" />
      <Compile Include="Assets\Scripts\UIElement.cs" />
+     <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\BoxController.cs" />
+     <Compile Include="Assets\Scripts\ActivatorController.cs" />
+     <Compile Include="Assets\MissesField.cs" />
+     <Compile Include="Assets\Scripts\playerController.cs" />
+     <Compile Include="Assets\Scripts\ScoreField.cs" />
+     <Compile Include="Assets\Scripts\SpawnerController.cs" />
+     <Compile Include="Assets\Scripts\UI\InputPlaceholder.cs" />
+     <Compile Include="Assets\Destroyer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\countries.json" />
