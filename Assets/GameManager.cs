@@ -67,6 +67,11 @@ public class GameManager : MonoBehaviour
         score.Value = 0;
         Time.timeScale = 1;
         uiState.Value = "MainMenu";
+        var objects = GameObject.FindGameObjectsWithTag("Box");
+        foreach (var fgameObject in objects)
+        {
+            Destroy(fgameObject.gameObject);
+        }
         SceneManager.LoadScene("Main", LoadSceneMode.Single);
     }
 

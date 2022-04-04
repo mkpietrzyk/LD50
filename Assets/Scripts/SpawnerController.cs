@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,12 +10,16 @@ public class SpawnerController : MonoBehaviour
 {
     [SerializeField] private GameObject[] boxesPrefabs;
     [SerializeField] private GameObject chosenBox;
+    public BoolVariable gameStarted;
 
     public void SpawnObject()
     {
-        chosenBox = boxesPrefabs[0];
-        GameObject block = Instantiate(chosenBox, transform.position, Quaternion.identity);
-        block.GetComponentInChildren<TextMeshPro>().text = "";
+        if (gameStarted.Value)
+        {
+            chosenBox = boxesPrefabs[0];
+            GameObject block = Instantiate(chosenBox, transform.position, Quaternion.identity);
+            block.GetComponentInChildren<TextMeshPro>().text = "";    
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

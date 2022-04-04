@@ -50,7 +50,7 @@ public class ActivatorController : MonoBehaviour
                 var selectedCountry = difficultCountries[randomIndex].name;
                 other.GetComponentInChildren<TextMeshPro>().text = selectedCountry.ToLower();
             }
-            else if (localScaleZ == 1 || localScaleZ == 2)
+            else if (localScaleZ == 2 || localScaleZ == 3)
             {
                 var randomIndex = Random.Range(0, mediumCountries.Length);
                 var selectedCountry = mediumCountries[randomIndex].name;

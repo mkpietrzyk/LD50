@@ -4155,6 +4155,7 @@ MonoBehaviour:
   - {fileID: 8615360215537535571, guid: 12fdba97a69ab8648a26b2c264664aa1, type: 3}
   - {fileID: 8615360215537535571, guid: db04d0f160bed0e4daee5f39b772d160, type: 3}
   chosenBox: {fileID: 0}
+  gameStarted: {fileID: 11400000, guid: 05559b41f0e4afd41aabb543af8e0cff, type: 2}
 --- !u!1 &973026066
 GameObject:
   m_ObjectHideFlags: 0
@@ -9748,7 +9749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: XXXX
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dff346c346654b2408693f39359eee4a, type: 2}
   m_sharedMaterial: {fileID: 523148067648675418, guid: dff346c346654b2408693f39359eee4a, type: 2}
